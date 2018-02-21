@@ -1,6 +1,6 @@
 {
   "name": "try-catch-wrapper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This package are simple wrapper, based on functional programming paradigm with higher order function",
   "main": "index.min.js",
   "scripts": {
