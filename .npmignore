@@ -1,0 +1,10 @@
+node_modules
+examples
+
+index.js
+package-lock.json
+
+.npmignore
+.editorconfig
+.gitignore
+.babelrc

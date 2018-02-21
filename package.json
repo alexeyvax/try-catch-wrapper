@@ -1,0 +1,33 @@
+{
+  "name": "try-catch-wrapper",
+  "version": "0.0.1",
+  "description": "This package are simple wrapper, based on functional programming paradigm with higher order function",
+  "main": "index.min.js",
+  "scripts": {
+    "build": "./node_modules/.bin/rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexeyvax/try-catch-wrapper.git"
+  },
+  "author": "alexeyvax Alexey Vakhrushev <alexeyvax1990@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexeyvax/try-catch-wrapper/issues",
+    "email": "alexeyvax1990@gmail.com"
+  },
+  "homepage": "https://github.com/alexeyvax/try-catch-wrapper#readme",
+  "keywords": [
+    "try-catch",
+    "try-catch-wrapper",
+    "react-try-catch"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "rollup": "^0.56.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-uglify": "^3.0.0"
+  }
+}
