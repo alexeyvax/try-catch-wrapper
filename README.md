@@ -8,13 +8,13 @@ try-catch-wrapper can use with React or similar library!
 
 **Use with React**
 
-[with state component](https://github.com/alexeyvax/try-catch-wrapper/blob/master/examples/StatelessCompoent.jsx)
+ - [with state component](https://github.com/alexeyvax/try-catch-wrapper/blob/master/examples/StatelessCompoent.jsx)
 
-[with functional component](https://github.com/alexeyvax/try-catch-wrapper/blob/master/examples/FunctionalComponent.jsx)
+ - [with functional component](https://github.com/alexeyvax/try-catch-wrapper/blob/master/examples/FunctionalComponent.jsx)
 
 **Use with vanila JS**
 
-[just JS](https://github.com/alexeyvax/try-catch-wrapper/blob/master/examples/justJS.js)
+ - [just JS](https://github.com/alexeyvax/try-catch-wrapper/blob/master/examples/justJS.js)
 
 
 ## Installation
