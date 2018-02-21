@@ -6,12 +6,14 @@ try-catch-wrapper can use with React or similar library!
 
 ## Examples
 
-Use with React
+**Use with React**
+
 [with state component](https://github.com/alexeyvax/try-catch-wrapper/blob/master/examples/StatelessCompoent.jsx)
 
 [with functional component](https://github.com/alexeyvax/try-catch-wrapper/blob/master/examples/FunctionalComponent.jsx)
 
-Use with vanila JS
+**Use with vanila JS**
+
 [just JS](https://github.com/alexeyvax/try-catch-wrapper/blob/master/examples/justJS.js)
 
 
@@ -19,6 +21,10 @@ Use with vanila JS
 
 ```
 npm install --save try-catch-wrapper
+
+or
+
+yarn add try-catch-wrapper
 ```
 
 ## How work with try-catch-wrapper
