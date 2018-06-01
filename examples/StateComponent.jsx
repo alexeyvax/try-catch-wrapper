@@ -1,39 +1,23 @@
 import React, { Component } from 'react';
 import errorHandler from 'try-catch-wrapper';
 
-const errMsg = {
-  show: true,
-  type: 'warning',
-  message: 'Error, in state component!',
-};
-
-const errFuncParameters = {
-  message: 'some message state component',
-};
-
-class StatelessCompoent extends Component {
+class StateCompoent extends Component {
   constructor(props) {
     super(props);
 
-    this.someErrCallback = this.someErrCallback.bind(this);
+    this.someFunc = this.someFunc.bind(this);
     /* pass arguments to try-catch-wrapper */
-    this.someFunc = errorHandler({
-      func: this.someFunc.bind(this),
-      errFunc: this.someErrCallback,
-      errorMessage: errMsg,
-      errFuncParameters: errFuncParameters,
-    });
+    this.someFunc = errorHandler(
+      'Error, in state component!',
+      (err, arg) => console.log(err, arg, 'arg'),
+      'some message in state component',
+    )(this.someFunc);
   }
 
   someFunc(one, two, three) {
     console.log(one, two, three);
     throw new Error('Oops!');
     console.log(1234567890);
-  }
-
-  someErrCallback(arg) {
-    console.log(arg, 'arg');
-    console.log('someErrCallback have been called!');
   }
 
   render() {
