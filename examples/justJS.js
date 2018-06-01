@@ -2,7 +2,6 @@ import errorHandler from 'try-catch-wrapper';
 
 const errMsg = {
   show: true,
-  type: 'warning',
   message: 'The num bigger than expected!',
 };
 
@@ -14,10 +13,7 @@ function fibonacci(num, memo = {}) {
   return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
 }
 
-fibonacci = errorHandler({
-  func: fibonacci,
-  errorMessage: errMsg,
-});
+fibonacciWrapper = errorHandler(errMsg)(fibonacci);
 
-console.log(fibonacci(10)); // 89
-console.log(fibonacci(100)); // The num bigger than expected!
+console.log(fibonacciWrapper(10)); // 89
+console.log(fibonacciWrapper(100)); // The num bigger than expected!

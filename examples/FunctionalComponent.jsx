@@ -7,32 +7,24 @@ const errMsg = {
   message: 'Error, in functional component!',
 };
 
-const errFuncParameters = {
-  message: 'some message in functional component',
-};
+const errFnParam = 'some message in functional component';
 
-let someFunc = (one, two, three) => {
+const someFunc = (one, two, three) => {
   console.log(one, two, three);
   throw new Error('Oops!');
   console.log(1234567890);
 };
 
-const someErrCallback = (arg) => {
-  console.log(arg, 'arg');
-  console.log('someErrCallback have been called!');
-};
-
-someFunc = errorHandler({
-  func: someFunc,
-  errFunc: someErrCallback,
-  errorMessage: errMsg,
-  errFuncParameters: errFuncParameters,
-});
+const someFuncWraper = errorHandler(
+  errMsg,
+  (err, arg) => console.log(err, arg, 'arg'),
+  errFnParam,
+)(someFunc);
 
 const FunctionalComponent = () => {
   return (
     <div className="functionalComponent">
-      <button onClick={() => someFunc('functional test component', 555, 888)}>
+      <button onClick={() => someFuncWraper('functional test component', 555, 888)}>
         Call some function FunctionalComponent
       </button>
     </div>
